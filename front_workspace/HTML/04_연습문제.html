@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 태그 활용하기</title>
+
+    <!--
+    태그에 스타일을 적용하는 방법
+    첫 번째 방법 : 태그 안에 스타일을 작성하는 법
+    두 번째 방법 : <style> 태그를 작성 후 태그 안에 설정하고자 하는 태그에 각각 스타일을 커스텀한 후 {}로 묶어주기
+      동일한 스타일을 각각의 태그에 적용 할 땐
+        태그이름, 태그이름 ... {적용할 스타일 속성}
+              th,td {border: 1px solid black;}
+
+      background-color : 배경색상 설정
+      text-align: center : 글자를 가운데로 정렬하는 속성
+      margin: 0 auto : 어떤 틀이나 표를 가운데 정렬하는 속성 or 원하는 값 만큼 공백 주기
+    -->
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        margin: 0 auto;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      thead {
+        background-color: rgb(156, 43, 43);
+      }
+
+      tbody {
+        background-color: rgb(228, 156, 156);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center">상품목록</h1>
+
+    <!--
+    table 태그 안에 스타일을 작성하는 법
+    <table style="border-collapse: collapse" , border="1">
+    -->
+
+    <table>
+      <thead>
+        <tr>
+          <th>상품명</th>
+          <th>가격</th>
+          <th>재고</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>노트북</td>
+          <td>1,500,000원</td>
+          <td>5대</td>
+        </tr>
+
+        <tr>
+          <td>스마트폰</td>
+          <td>900,000원</td>
+          <td>10대</td>
+        </tr>
+
+        <tr>
+          <td>테블릿</td>
+          <td>600,000원</td>
+          <td>7대</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="3">총 상품 수 : 3 가지</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

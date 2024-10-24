@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표 관련 응용</title>
+  </head>
+  <body>
+    <h1>테이블 관련 추가 태그</h1>
+    <pre>
+    [테이블 영역 지정 태그]
+    thead 태그 : 테이블 상단 영역(컬럼의 제목을 작성하는 공간)
+    tbody 태그 : 테이블 중단 영역(컬럼 안에 내용이나 값을 작성하는 공간)
+    tfoot 태그 : 테이블 하단 영역(컬럼 특정 값의 합계나 인원수를 작성하는 공간)
+
+    (* 참고 사항 *)
+    table 태그 내부를 thead, tboody, tfoot으로 나누지 않으면
+    모든 tr, td, th 태그는 tbody 내부에 작성된 것으로 취급한다
+    </pre>
+
+    <table style="border-collapse: collapse" , border="1">
+      <thead style="background-color: yellowgreen">
+        <tr>
+          <th>이름</th>
+          <th>나이</th>
+          <td>주소</td>
+        </tr>
+      </thead>
+
+      <tbody style="background-color: yellow">
+        <tr>
+          <td>김영희</td>
+          <td>40</td>
+          <td>서울시 강남구</td>
+        </tr>
+
+        <tr>
+          <td>박철수</td>
+          <td>50</td>
+          <td>경기도 파주시</td>
+        </tr>
+      </tbody>
+
+      <tfoot style="background-color: orange; color: white" ,>
+        <tr>
+          <!--
+          rowspan="숫자" : 세로열 셀 병합
+          colspan="숫자" : 가로행 셀 병합
+          -->
+          <th colspan="2">총인원</th>
+          <th>3명</th>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

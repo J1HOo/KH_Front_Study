@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지 관련 태그</title>
+  </head>
+  <body>
+    <h1>img 태그 사용하기</h1>
+    <pre>
+      - 웹 문서에서 사진이나 그림 같은 이미지를 삽입하는 용도의 태그
+
+      [속성] 시작 태그 안에 작성하는 설정
+
+        1. src : 삽입할 이미지의 경로를 작성하는 속성 (파일 위치, 인터넷 주소)
+        2. width / heigh : 너비 높이를 조정하는 속성
+        3. alt : 이미지에 대한 설명을 작성하는 속성
+          - 이미지가 보이지 않을 경우 화면에 이미지 이름 출력
+          - 스크린 리더가 이미지 설명을 읽어줌
+            스크린 리더 : 화면의 텍스트를 읽어주는 기능
+
+        이미지는 닫는 태그 없이 단독으로 한 번만 작성
+        <!--
+        <img src="이미지 경로" alt="이미지의 설명"/>
+          최신버전에서는 /는 생략 가능 > or /> 
+        -->
+    </pre>
+
+    <h3>이미지 가져오기 예제</h3>
+    <!-- px : 최소 크기 단위 픽셀,  alt는 생략 가능 -->
+    <img src="img/dog.jpeg" alt="라떼사진" width="300px" height="300px" />
+    <img src="img/cat.jpeg" alt="야옹이사진" width="300px" height="300px" />
+    <img src="img/main-image.jpg" width="300px" height="300px" />
+    <img src="img/new-menu.png" width="300px" height="300px" />
+
+    <h3>외부에 저장된 이미지를 가져오는 방법</h3>
+    <img
+      src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif"
+    />
+    <img
+      src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif"
+    />
+
+    <!--
+    이미지를 여러장 가져와 한 공간에 넣은 다음 이미지를 보여줄 때 이미지를 넣는 태그를 많이 사용
+    div 태그 : 큰 형식 없이 글자, 이미지, 동영상 등에 속성을 주기 위해 쓰는 틀과 같은 태그
+    display: flex : 태그 안에 글자나 이미지 등을 태그 안으로 정리하는 속성 정렬 배치, 공간 분배 등에 쓰임
+    -->
+
+    <div
+      style="
+        border: 1px solid black;
+        width: 1000px;
+        height: 300px;
+        display: flex;
+      "
+    >
+      <img src="img/cat.jpeg" width="25% " height="70%" />
+      <img src="img/dog.jpeg" width="25% " height="70%" />
+      <img src="img/main-image.jpg" width="25% " height="70%" />
+      <img src="img/new-menu.png" width="25% " height="70%" />
+    </div>
+  </body>
+</html>

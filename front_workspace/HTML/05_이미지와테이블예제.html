@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이미지와 테이블 예제</title>
+
+    <!-- 스타일 태그 안에 태그이름을 가져와 중괄호로 작성해줄 때 주석처리를 하는 방법 : /* */ -->
+    <style>
+      img {
+        width: 150px; /* 가로 크기를 150으로 고정 */
+      }
+
+      table {
+        width: 80%; /* 가로 전체 중 80%만 차지 */
+        border-collapse: collapse;
+        border: 1px solid #ddd; /* #ddd는 html에 기본적으로 이름을 붙여준 컬러가 아니여서 ddd로 표기되어 있다. */
+        margin: 0 auto;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        text-align: center;
+      }
+
+      thead {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>상품 정보</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>이미지</th>
+          <th>상품명</th>
+          <th>가격</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>
+            <img
+              src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif"
+            />
+          </td>
+          <td>애니메이션 상품</td>
+          <td>50,000원</td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+            src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif""
+            />
+          </td>
+          <td>GIF 이미지 상품</td>
+          <td>75,000원</td>
+        </tr>
+
+        <tr>
+          <td>
+            <img
+            src="https://blog.kakaocdn.net/dn/b09Ie6/btqKShjRyXG/XA7WOJZIEeiZiIK3TAK9fK/img.gif""
+            />
+          </td>
+          <td>스페셜 이미지 상품</td>
+          <td>120,000원</td>
+        </tr>
+      </tbody>
+
+      <tfoot>
+        <tr>
+          <td colspan="3">총 상품 수 : 3</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

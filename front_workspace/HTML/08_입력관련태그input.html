@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력 관련 태그 - input 편</title>
+  </head>
+  <body>
+    <h1>입력 관련 태그 input 편</h1>
+    <pre>
+      input type 종류
+      글자 = text
+      비밀번호 = password
+      이메일 = email
+      전화번호 = tel
+      숫자 = number
+      범위(슬라이더) = range
+      파일 = file
+      시간 / 주 / 월 = time / week / month
+      체크박스 = checkbox
+      라디오 = radio
+      제출 / 리셋 / 숨김 = submit / reset / hidden
+    </pre>
+
+    <h3>텍스트 입력 비밀번호 입력 활용하기</h3>
+    <label>아이디 입력:</label>
+    <input type="text" placeholder="아이디를 입력해주세요." />
+
+    <br />
+
+    <label>비밀번호 입력:</label>
+    <input type="password" placeholder="비밀번호를 입력해주세요." />
+    <!-- 타입을 password라고 지정하면 사용자가 타이핑을 하면 타이핑 내용이 가려진체로 입력된다. -->
+
+    <br />
+
+    <label>이메일 입력:</label>
+    <input type="email" placeholder="이메일을 입력해주세요." />
+    <!-- 타입을 email로 지정해놓으면 이메일 형식에 맞지 않으면 형식에 맞지 않다는 경고를 띄울 수 있다 -->
+
+    <br />
+
+    <label>숫자만 입력:</label>
+    <input type="number" placeholder="숫자만 입력해주세요." />
+    <hr />
+
+    <h3>체크박스 및 라디오 버튼</h3>
+    <label>구독 여부 체크하기 :</label>
+    <!--
+    type checkbox는 선택안함 부분선택 모두선택이 가능한 체크박스
+    id와 name이 필수는 X
+    id: 꾸미거나 특정 기능을 작동시킬 때 사용하는 이름
+    name : 제출할 때 사용하는 제출명
+    -->
+    <input type="checkbox" id="구독" name="구독" />
+    이메일 구독
+
+    <input type="checkbox" id="구독" name="구독" />
+    휴대폰 구독
+
+    <br />
+
+    <!--
+    type radio 속성은 선택지 중 한가지만 선택할 수 있도록 설정하는 속성 
+    name 속성은 radio 속성을 사용할 때 선택범위를 지정해주는 역할
+    선택 범위를 지정해서 각 범위에 선택된 값을 개발자에게 전달
+    -->
+    <label>성별 선택하기 :</label>
+    <input type="radio" name="성별" />
+    알 수 없음
+    <input type="radio" name="성별" />
+    남자
+    <input type="radio" name="성별" />
+    여자
+
+    <br />
+
+    <label>결혼 유무 :</label>
+    <input type="radio" name="결혼유무" />
+    미혼
+    <input type="radio" name="결혼유무" />
+    기혼
+
+    <hr />
+
+    <h2>버튼 및 기타</h2>
+    <!-- 제출 버튼 value = 특정 상태에 확실한 값으로 표시하기 위해 사용 -->
+    <input type="submit" value="보내기" />
+    <!-- 리셋 버튼(작성된 모든 내용 지우기) -->
+    <input type="reset" value="초기화" />
+    <!-- 숨김 버튼  사용자 눈엔 안보이지만 코드 상에선 보임 -->
+    <input type="hidden" value="숨겨진 값" />
+
+    <hr />
+
+    <h3>파일을 담아 전달하거나 출력하는 속성</h3>
+    <input type="file" />
+
+    <hr />
+
+    <h3>날짜 선택</h3>
+    <input type="date" />
+
+    <!--
+    type = range  슬라이드바를 이용해 숫자를 지정하며 주로 js와 함께 사용
+    [속성]
+    1. min :  최소값
+    2. max :  최대값
+    3. step : 숫자가 증가/감소하는 단계
+    4: value : 초기 값 지정
+    -->
+    <h3>범위 선택</h3>
+    <input type="range" min="0" max="100" value="10" />
+
+    <hr />
+
+    <h3>색상 선택</h3>
+    <input type="color" />
+  </body>
+</html>

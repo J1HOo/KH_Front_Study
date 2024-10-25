@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>피자 주문하기</title>
+    <style>
+      img {
+        width: 50%;
+      }
+
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>피자 주문하기</h1>
+
+      <img src="img/pizza.png" />
+      <br />
+      <input type="radio" name="size" />
+      작은 사이즈
+      <input type="radio" name="size" />
+      중간 사이즈(+10,000)
+      <input type="radio" name="size" />
+      큰 사이즈(+20,000)
+
+      <br />
+      <br />
+
+      <label>토핑 추가 :</label>
+      <input type="checkbox" id="토핑" name="토핑" />
+      페페로니 추가
+      <input type="checkbox" id="토핑" name="토핑" />
+      치즈 추가
+      <input type="checkbox" id="토핑" name="토핑" />
+      고구마 토핑
+      <input type="checkbox" id="토핑" name="토핑" />
+      올리브 추가
+
+      <br />
+      <br />
+
+      <label>피자 수량 :</label>
+      <input type="number" min="1" placeholder="주문 수량 입력" />
+
+      <br />
+      <br />
+
+      <label style="margin-left: 10px">전화번호 :</label>
+      <input type="tel" placeholder="예시:010-1234-1234" />
+
+      <br />
+      <br />
+
+      <label>추가 요청사항 :</label>
+      <input
+        style="margin-right: 20px"
+        type="text"
+        placeholder="문앞에 두고 문자 주세요."
+      />
+
+      <br />
+      <br />
+
+      <input type="submit" value="주문하기" />
+    </div>
+  </body>
+</html>

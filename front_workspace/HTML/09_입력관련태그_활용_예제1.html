@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원 가입 폼</title>
+  </head>
+  <body>
+    <!-- div 태그는 반드시 body 안에 존재 -->
+    <div>
+      <h1>회원가입 폼</h1>
+      <br />
+      <label style="margin-left: 12px">고객명 :</label>
+      <input name="clientName" type="text" />
+
+      <br />
+      <br />
+
+      <label>전화번호 :</label>
+      <input name="clientPhone" type="number" />
+
+      <br />
+      <br />
+
+      <label style="margin-left: 20px">email :</label>
+      <input name="clientEmail" type="email" />
+
+      <br />
+      <br />
+
+      <label>피자선택 : </label>
+      <select name="size">
+        <option>피자를 선택하세요</option>
+      </select>
+
+      <br />
+
+      <fieldset>
+        <legend>피자 사이즈</legend>
+        <input type="radio" name="size" value="Small" />
+        Small
+        <br />
+        <br />
+        <input type="radio" name="size" value="Medium" />
+        Medium
+        <br />
+        <br />
+        <input type="radio" name="size" value="Large" />
+        Large
+      </fieldset>
+
+      <fieldset>
+        <legend>토핑 선택</legend>
+        <input type="checkbox" name="topping" value="베이컨" />
+        베이컨
+        <br />
+        <br />
+        <input type="checkbox" name="topping" value="치즈" />
+        치즈
+        <br />
+        <br />
+        <input type="checkbox" name="topping" value="양파" />
+        양파
+        <br />
+        <br />
+        <input type="checkbox" name="topping" value="버섯" />
+        버섯
+      </fieldset>
+
+      <br />
+
+      <label>희망배송시간 :</label>
+      <input type="time" name="wishTime" />
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <input type="submit" value="주문하기" />
+    </div>
+  </body>
+</html>

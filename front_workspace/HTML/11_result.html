@@ -11,7 +11,7 @@
     <br />
     <h3>입력된 사용자 아이디 : <span id="id-result"></span></h3>
     <br />
-    <h3>입력된 사용자 비밀번호 : <span id="passowrd-result"></span></h3>
+    <h3>입력된 사용자 비밀번호 : <span id="pw-result"></span></h3>
 
     <script>
       const params = new URL(location.href).searchParams;
@@ -19,10 +19,10 @@
       nameResult.innerText = params.get("input-name");
 
       const idResult = document.getElementById("id-result");
-      idResult.innerText = document.getElementById("input-id");
+      idResult.innerText = params.get("input-id");
 
       const pwResult = document.getElementById("pw-result");
-      pwResult.innerText = document.getElementById("input-pw");
+      pwResult.innerText = params.get("input-pw");
     </script>
 
     <hr />

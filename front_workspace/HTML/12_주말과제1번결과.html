@@ -43,5 +43,11 @@
       const etcResult = document.getElementById("기타사항-결과");
       etcResult.innerText = params.get("etc");
     </script>
+
+    <h3>텍스트가 들어갈 자리 : <span id="text-result"></span></h3>
+    <script>
+      const TR = document.getElementById("text-result");
+      TR.innerText = params.get("testText");
+    </script>
   </body>
 </html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>납품정보결과</title>
+  </head>
+  <body>
+    <h1>결과 확인하기</h1>
+    <h3>납품자명 : <span id="납품자명-결과"></span></h3>
+    <h3>이메일 : <span id="이메일-결과"></span></h3>
+    <h3>홈페이지 : <span id="홈페이지-결과"></span></h3>
+    <h3>지역 : <span id="지역-결과"></span></h3>
+    <h3>상품명 : <span id="상품명-결과"></span></h3>
+    <h3>납품수량 : <span id="납품수량-결과"></span></h3>
+    <h3>납품등급 : <span id="납품등급-결과"></span></h3>
+    <h3>기타사항 : <span id="기타사항-결과"></span></h3>
+
+    <script>
+      const params = new URL(location.href).searchParams;
+
+      const nameResult = document.getElementById("납품자명-결과");
+      nameResult.innerText = params.get("name");
+
+      const emailResult = document.getElementById("이메일-결과");
+      emailResult.innerText = params.get("email");
+
+      const homepageResult = document.getElementById("홈페이지-결과");
+      homepageResult.innerText = params.get("homepage");
+
+      const locationResult = document.getElementById("지역-결과");
+      locationResult.innerText = params.get("location");
+
+      const productResult = document.getElementById("상품명-결과");
+      productResult.innerText = params.get("productName");
+
+      const amountResult = document.getElementById("납품수량-결과");
+      amountResult.innerText = params.get("amount");
+
+      const gradeResult = document.getElementById("납품등급-결과");
+      gradeResult.innerText = params.get("grade");
+
+      const etcResult = document.getElementById("기타사항-결과");
+      etcResult.innerText = params.get("etc");
+    </script>
+  </body>
+</html>

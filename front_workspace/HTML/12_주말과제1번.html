@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>납품</title>
+  </head>
+  <body>
+    <form action="12_주말과제1번결과.html">
+      <fieldset>
+        <legend>납품자 정보</legend>
+        <br />
+        <label>납품자명 :</label>
+        <input name="name" type="text" />
+
+        <br />
+        <br />
+
+        <label style="margin-left: 20px">email :</label>
+        <input name="email" type="email" placeholder="answer@naver.com" />
+
+        <br />
+        <br />
+
+        <label>홈페이지 :</label>
+        <input name="homepage" type="text" value="http://" />
+
+        <br />
+        <br />
+
+        <label style="margin-left: 28px">지역 : </label>
+        <select name="location">
+          <option>부산</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <legend>납품 정보</legend>
+        <br />
+        <label style="margin-left: 14px">상품명 :</label>
+        <input name="productName" type="text" />
+
+        <br />
+        <br />
+
+        <label>납품수량 :</label>
+        <input
+          name="amount"
+          type="number"
+          placeholder="최소 100"
+          minlength="100"
+        />
+
+        <br />
+        <br />
+
+        <label>납품등급 :</label>
+        <input name="grade" type="range" minlength="1" maxlength="5" />
+
+        <br />
+        <br />
+
+        <label>기타사항 : </label>
+        <textarea style="width: 5px; height: 20px" name="etc"></textarea>
+      </fieldset>
+
+      <br />
+      <br />
+
+      <input type="submit" value="send message" />
+    </form>
+  </body>
+</html>

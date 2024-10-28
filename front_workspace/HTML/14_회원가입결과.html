@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 결과</title>
+    <style>
+      div {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 15px;
+        padding: 20px;
+      }
+      span {
+        padding: 5px;
+      }
+      img {
+        width: 150px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>사진동아리 회원 가입 완료</h1>
+      <img src="img/cat.jpeg" />
+
+      <br />
+
+      <h3>
+        이름 :
+        <span id="user-result" />
+      </h3>
+
+      <h3 style="">
+        아이디 :
+        <span id="name-result" />
+      </h3>
+
+      <h3>
+        비밀번호 :
+        <span id="pw-result" />
+      </h3>
+
+      <h3>
+        이메일 :
+        <span id="email-result" />
+      </h3>
+    </div>
+
+    <script>
+      const params = new URL(location.href).searchParams;
+
+      const userResult = document.getElementById("user-result");
+      userResult.innerText = params.get("user-name");
+
+      const nameResult = document.getElementById("name-result");
+      nameResult.innerText = params.get("name");
+
+      const pwResult = document.getElementById("pw-result");
+      pwResult.innerText = params.get("user-pw");
+
+      const emailResult = document.getElementById("email-result");
+      emailResult.innerText = params.get("user-email");
+    </script>
+  </body>
+</html>

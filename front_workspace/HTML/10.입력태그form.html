@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력 관련 태그 - form 태그</title>
+  </head>
+  <body>
+    <h1>form 태그</h1>
+    <!--
+    action : form 안에 있는 값을 전달할 페이지 
+    name : 데이터를 담을 그릇의 네임 태그
+    이름 작성 -> 제출하기 클릭 -> 유저-이름(name)안에 이름 데이터(ex.홍길동)가 들어감 ->
+    결과.html(action)로 데이터 전송
+    -->
+
+    <form action="10_결과.html">
+      <label style="margin-left: 37px">이름</label>
+
+      <input type="text" name="유저-이름" />
+      <button>제출하기</button>
+
+      <br />
+      <br />
+
+      <label style="margin-left: 14px">아이디 : </label>
+      <input
+        type="text"
+        name="유저-아이디"
+        placeholder="아이디를 입력해주세요."
+      />
+
+      <br />
+      <br />
+
+      <label>비밀번호 : </label>
+      <input
+        type="password"
+        name="유저-비밀번호"
+        placeholder="비밀번호를 입력해주세요."
+      />
+
+      <br />
+      <br />
+
+      <button>로그인</button>
+    </form>
+  </body>
+</html>

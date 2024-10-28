@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결과 페이지</title>
+  </head>
+  <body>
+    <!-- 
+        const = 변수 생성
+
+        new URL(location.href) : 지금 보고 있는 웹페이지의 주소(URL)를 가져옴
+        주소는 우리가 입력한 데이터, 웹사이트가 전달받은 정보를 포함할 수 있음
+
+        searchParams : URL에 포함된 추가 데이터를 가져오거나 다루는 것
+        ex) http://example.com?유저-이름=홍길동 중 " 유저-이름=홍길동 " 부분
+
+        const 데이터전달하기 = new URL(location.href).searchParams :
+        " 데이터전달하기 "라는 변수를 생성하고 그 안에 현재 페이지의 URL에 포함된 추가 데이터를 넣어라
+        ex) http://example.com?유저-이름=홍길동 라면 " 데이터전달하기 " 안에 " 유저-이름=홍길동 " 이라는 데이터를 삽입
+
+        document : 현재 보고 있는 HTML 문서 JS를 사용해 HTML 문서의 특정 부분을 가져오거나 수정할 수 있도록 도와줌
+        getElementById(가져올 id 값) : 찾고자 하는 요소 가져오기
+
+        const 이름결과 = document.getElementById("이름-결과");
+        " 이름결과 "라는 변수를 생성하고 " 이름-결과 "라는 이름을 가진 요소(<span id="이름-결과">) 
+        를 불러와 " 이름결과 "에 저장
+        즉 " 이름결과 " 변수 안에 <span id="이름-결과"></span>를 집어 넣기
+
+        이름결과.innerText = 데이터전달하기.get("유저-이름") :
+        "데이터전달하기" 안의 " 유저-이름 "이라는 데이터 값( ex)유저-이름 = 홍길동이라면 " 홍길동 "이 데이터 값)을 가져와
+        " 이름결과 " 속 요소인 " 이름-결과 "에 데이터를 넣어라 
+        즉 <span id="이름-결과"></span> 안의(innerText) " 이름-결과 " 안에 " 유저-이름(홍길동) " 데이터 삽입
+
+        <span id="이름-결과"></span>
+        이름-결과 = 유저-이름( ex) 홍길동) 데이터 삽입 상태 즉 유저-이름 데이터가 출력
+
+-->
+    <h3>
+      입력된 사용자 이름 :
+      <span id="이름-결과"></span>
+      <script>
+        const 데이터전달하기 = new URL(location.href).searchParams;
+        const 이름결과 = document.getElementById("이름-결과");
+        이름결과.innerText = 데이터전달하기.get("유저-이름");
+      </script>
+    </h3>
+  </body>
+</html>

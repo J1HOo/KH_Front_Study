@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form으로 결과 제출하기</title>
+  </head>
+  <body>
+    <h1>form 태그를 활용해서 값 제출하기</h1>
+
+    <form action="11_result.html">
+      이름 : <input type="text" name="input-name" />
+
+      <br />
+      <br />
+
+      아이디 : <input type="text" name="input-id" />
+
+      <br />
+      <br />
+
+      비밀번호 : <input type="text" name="input-password" />
+
+      <br />
+      <br />
+
+      <button>로그인</button>
+    </form>
+
+    <hr />
+
+    <form action="11_result.html">
+      1번 점수 입력 :
+      <input
+        name="1번점수"
+        type="range"
+        min="0"
+        max="200"
+        step="5"
+        value="100"
+      />
+      <br />
+      2번 점수 입력 :
+      <input
+        name="2번점수"
+        type="range"
+        min="0"
+        max="200"
+        step="5"
+        value="100"
+      />
+      <br />
+      <button>제출하기</button>
+    </form>
+  </body>
+</html>

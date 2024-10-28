@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form 제출 결과 페이지</title>
+  </head>
+  <body>
+    <h1>form 태그로 전달받은 결과물 눈으로 확인하는 결과 페이지</h1>
+
+    <h3>입력된 사용자 이름: <span id="이름-결과"></span></h3>
+
+    <hr />
+
+    <h3>입력된 사용자 아이디: <span id="아이디-결과"></span></h3>
+
+    <hr />
+
+    <h3>입력된 사용자 비밀번호: <span id="비밀번호-결과"></span></h3>
+  </body>
+
+  <script>
+    const 데이터전달하기 = new URL(location.href).searchParams;
+    const 이름결과 = document.getElementById("이름-결과");
+    이름결과.innerText = 데이터전달하기.get("유저-이름");
+
+    // html의 아이디-결과와 script에 작성한 아이디-결과는 동일한 의미임을 뜻함
+    const 아이디결과 = document.getElementById("아이디-결과");
+
+    아이디결과.innerText = 데이터전달하기.get("유저-아이디");
+
+    const 비밀번호결과 = document.getElementById("비밀번호-결과");
+    비밀번호결과.innerText = 데이터전달하기.get("유저-비밀번호");
+  </script>
+</html>

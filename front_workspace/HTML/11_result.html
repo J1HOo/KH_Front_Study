@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결과 확인하기</title>
+  </head>
+  <body>
+    <h1>Result Page</h1>
+    <h3>입력된 사용자 이름 : <span id="name-result"></span></h3>
+    <br />
+    <h3>입력된 사용자 아이디 : <span id="id-result"></span></h3>
+    <br />
+    <h3>입력된 사용자 비밀번호 : <span id="passowrd-result"></span></h3>
+
+    <script>
+      const params = new URL(location.href).searchParams;
+      const nameResult = document.getElementById("name-result");
+      nameResult.innerText = params.get("input-name");
+
+      const idResult = document.getElementById("id-result");
+      idResult.innerText = document.getElementById("input-id");
+
+      const pwResult = document.getElementById("pw-result");
+      pwResult.innerText = document.getElementById("input-pw");
+    </script>
+
+    <hr />
+
+    <hr3>입력된 점수값 1번 : <span id="1번점수-결과"></span> </hr3>
+    <br />
+    <hr3>입력된 점수값 2번 : <span id="2번점수-결과"></span> </hr3>
+
+    <script>
+      const score1 = document.getElementById("1번점수-결과");
+      const score2 = document.getElementById("2번점수-결과");
+
+      score1.innerText = params.get("1번점수");
+      score2.innerText = params.get("2번점수");
+    </script>
+  </body>
+</html>

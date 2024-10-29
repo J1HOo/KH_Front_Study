@@ -8,28 +8,63 @@
   <style>
     .컨테이너 {
     }
-    ul {
+
+    .num-ul {
       /* 기본 리스트 스타일 제거 */
       list-style: none;
     }
-    li {
+
+    .num-li {
       padding: 15px;
       background-color: lightgray;
       border-radius: 8px;
       font-size: 18px;
       margin: 10px;
     }
+    .num-li:hover {
+      background-color: lightcoral;
+      color: white;
+      transform: translateX(
+        20px
+      ); /* xyz축으로 나눠지므로 왼쪽 오른쪽은 -, +로 조정 */
+    }
+
+    .알파벳-ul {
+      list-style: none;
+    }
+    .알파벳-li {
+      margin: 10px;
+      background-color: #ddd;
+      font-size: 20px;
+      border-radius: 8px;
+      padding: 20px;
+      transition: transform 0.5s;
+    }
+    .알파벳-li:hover {
+      background-color: black;
+      color: white;
+      transform: translateX(-15px); /*hover로ㅗ 변경되는 속도 조절 */
+    }
   </style>
   <body>
     <div class="컨테이너"></div>
     <h1>Hover 효과가 있는 리스트</h1>
-    <ul>
-      <li>리스트 항목 1</li>
-      <li>리스트 항목 2</li>
-      <li>리스트 항목 3</li>
-      <li>리스트 항목 4</li>
-      <li>리스트 항목 5</li>
+    <ul class="num-ul">
+      <li class="num-li">리스트 항목 1</li>
+      <li class="num-li">리스트 항목 2</li>
+      <li class="num-li">리스트 항목 3</li>
+      <li class="num-li">리스트 항목 4</li>
+      <li class="num-li">리스트 항목 5</li>
     </ul>
+
+    <ul class="알파벳-ul">
+      <li class="알파벳-li">리스트 항목 A</li>
+      <li class="알파벳-li">리스트 항목 B</li>
+      <li class="알파벳-li">리스트 항목 C</li>
+      <li class="알파벳-li">리스트 항목 D</li>
+      <li class="알파벳-li">리스트 항목 E</li>
+    </ul>
+
     <h1></h1>
   </body>
 </html>

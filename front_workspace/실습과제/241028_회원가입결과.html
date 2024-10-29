@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입 결과</title>
+  </head>
+  <link rel="stylesheet" href="241028_style.css" />
+  <body>
+    <div>
+      <h1>맛있어 치킨가게 회원가입 완료</h1>
+
+      <h3>
+        이름 :
+        <span id="name-result" />
+      </h3>
+
+      <h3>
+        아이디 :
+        <span id="id-result" />
+      </h3>
+
+      <h3>
+        비밀번호 :
+        <span id="pw-result" />
+      </h3>
+
+      <h3>
+        이메일 :
+        <span id="email-result" />
+      </h3>
+
+      <h3>
+        좋아하는 치킨 :
+        <span id="chicken-result" />
+      </h3>
+    </div>
+
+    <script>
+      const params = new URL(location.href).searchParams;
+
+      const nameResult = document.getElementById("name-result");
+      nameResult.innerText = params.get("user-name");
+
+      const idResult = document.getElementById("id-result");
+      idResult.innerText = params.get("user-id");
+
+      const pwResult = document.getElementById("pw-result");
+      pwResult.innerText = params.get("user-pw");
+
+      const emailResult = document.getElementById("email-result");
+      emailResult.innerText = params.get("user-email");
+
+      const chickenResult = document.getElementById("chicken-result");
+      chickenResult.innerText = params.get("favorite-chicken");
+    </script>
+  </body>
+</html>

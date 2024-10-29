@@ -38,3 +38,36 @@ h1 {
   color: white;
   font-size: 30px;
 }
+
+.hover-box {
+  border: 3px solid black;
+  width: 200px;
+  height: 300px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.hover-box:hover {
+  /* background-image : 배경 이미지 지정,  url("이미지 주소")
+    background-size : 배경 이미지 크기 지정 , cover : 칸 사이즈에 맞게 이미지 사이즈 수정
+  */
+
+  background-image: url(../../01_HTML/img/cat.jpeg);
+  background-size: cover;
+}
+
+.호버-박스 {
+  border: 3px dotted orange;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  cursor: pointer;
+}
+
+.호버-박스:hover {
+  background-image: url(../../01_HTML/img/flower1.jpg);
+  background-size: cover;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}

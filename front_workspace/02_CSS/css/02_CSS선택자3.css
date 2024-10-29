@@ -1,0 +1,38 @@
+.banner-img {
+  width: 100%;
+}
+
+.sandwich-info {
+  background-color: white;
+  border: 5px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+/*
+class="재료" 태그의 안에 작성된
+li 태그를 꾸며준다는 뜻
+*/
+.재료 {
+  list-style-type: none;
+}
+
+.재료 li {
+  background-color: #ddd;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3px;
+}
+.재료 li:hover {
+  background-color: aliceblue;
+}
+
+.make li {
+  font-size: 20px;
+  margin: 20px;
+}
+.make li:hover {
+  background-color: coral;
+  color: white;
+  padding: 20px;
+}

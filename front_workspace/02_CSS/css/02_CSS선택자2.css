@@ -86,9 +86,8 @@ h1 {
     outline-width : input 바깥 테두리 두께
     outline-style : input 바깥 테두리 점선/실선
     추세는 아웃라인 제거
-
-
   */
+
   outline-color: lightblue;
   outline-width: 10px;
   outline-style: solid;

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>확장프로그램 html auto completion</title>
+  </head>
+  <body>
+    <h1>html auto completion</h1>
+    <pre>
+      vscode 특정 태그를 반복 작성시 사용하는 확장프로그램
+
+      단축키
+      !html
+
+      !form
+      <form method='method' action='action'>
+          <input type='type' name='name' placeholder='placeholder'>
+          <input type='type' name='name' placeholder='placeholder'>
+          <input type='submit' value='value'>
+      </form>
+
+      !table
+      <style>
+        table{
+          width: 100%;
+          border: 1px solid black;
+          border-collapse: collapse;
+          margin-top: 20px;
+    }
+      td{
+        border:  1px solid black;
+        text-align: center;
+        background-color: #4caf50;
+        color: #ddd;
+        padding: 10px;
+        }
+      </style>
+      <table>
+          <tr>
+              <td>!</td>
+              <td>기본 html 양식</td>
+              <td>!!!</td>
+              <td> !DOCTYPE HTML 생성</td>
+          </tr>
+          <tr>
+              <td>!form</td>
+              <td>form 태그와 input, submit태그를 이용한 간단한 폼 생성</td>
+              <td>!html</td>
+              <td>!와 다르게 link 태그를 포함한 기본 양식</td>
+          </tr>
+          <tr>
+            <td>!table</td>
+            <td>간단한 테이블 양식 생성</td>  
+            </tr>
+      </table>
+    </pre>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+.image-list {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+.image-list li {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background-color: #ddd;
+  cursor: pointer;
+  text-align: center;
+  font-size: 36px;
+}
+.image-list li:hover {
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  font-size: 0px;
+}
+.list1:hover {
+  background-image: url(../image/flower1.jpg);
+}
+.list2:hover {
+  background-image: url(../image/flower2.jpg);
+}
+.list3:hover {
+  background-image: url(../image/flower3.jpg);
+}
+.list4:hover {
+  background-image: url(../image/flower4.jpg);
+}
+.list5:hover {
+  background-image: url(../image/flower5.jpg);
+}

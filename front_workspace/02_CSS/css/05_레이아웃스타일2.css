@@ -1,0 +1,51 @@
+div {
+  width: 200px;
+  height: 200px;
+  border: 2px solid black;
+}
+.A {
+  padding: 40px; /* 상 하 좌 우 모두 20px 설정 */
+  background-color: red;
+}
+
+.B {
+  padding: 20px 60px; /* 상하: 20px 좌우: 60px */
+}
+
+.C {
+  padding: 10px 30px 100px; /* 상: 10px 좌우: 30px 하: 100px */
+}
+
+.D {
+  padding: 10px 20px 30px 40px; /* 상: 10px 우: 20px 하: 30px 좌: 40px 시계방향 */
+  background-color: yellow;
+}
+
+.b {
+  width: 200px;
+  height: 200px;
+  background-color: lightcoral;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: aliceblue;
+
+  padding: 10px 15px 20px 5px;
+  /* padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 15px; */
+
+  margin: 30px 300px 100px 50px;
+  /* margin-top: 30px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+  margin-right: 300px; */
+
+  border-top: 5px solid red; /* 실선 */
+  border-bottom: 3px dotted black; /* 점(.)선 */
+  border-left: 10px double orange; /* 이중 실선 */
+  border-right: 3px dashed purple; /* 점(-)선 */
+}

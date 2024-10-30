@@ -1,0 +1,39 @@
+h1 {
+  color: orange;
+}
+strong {
+  font-size: 18px; /* 기본 폰트 사이즈 16px */
+  font-family: "궁서체", "Courier New", Courier, monospace; /* 글꼴 변경 : 선택한 글꼴이 없는 경우 다음으로 선택한 글꼴이 자동으로 선택됨 */
+  color: steelblue;
+}
+code {
+  background-color: lightcoral;
+  display: block; /* 배치 방식, 웹페이지에서 차지하는 공간과 위치 방식 지정
+   block : 항상 새 줄에서 시작하며 가로 너비를 모두 차지하려는 속성, width:100%,div,h,p 처럼 동작하며 나란히 배치 되지 않음 */
+  font-weight: bold; /* 글자의 굵기  bold: 두껍게 */
+}
+
+#선택1번 {
+  background-color: yellowgreen;
+}
+#선택2번 {
+  background-color: orange;
+}
+#선택3번 {
+  background-color: lightblue;
+}
+
+.테스트1 {
+  background-color: black;
+  color: white;
+}
+.테스트2 {
+  background-color: pink;
+}
+
+.test-1 {
+  background-color: orange;
+}
+.test-2 {
+  font-size: 30px;
+}

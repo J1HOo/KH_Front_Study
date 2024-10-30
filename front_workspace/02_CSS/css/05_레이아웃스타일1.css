@@ -1,0 +1,33 @@
+.block {
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  color: white;
+  /* div는 block 형태이므로 display: block;를 써도 변화 x */
+  display: inline;
+}
+
+/* 한 태그에 여러가지 class를 주고자 한다면 띄어쓰기로 구분 가능하며 클래스명 제한 x */
+.영역1번 {
+  background-color: black;
+}
+.영역2번 {
+  background-color: orange;
+}
+.영역3번 {
+  background-color: yellow;
+}
+.영역4번 {
+  background-color: green;
+}
+.영역5번 {
+  background-color: blue;
+}
+
+/*
+똑같은 class를 중복 사용할 경우 가장 마지막에 선언된 디자인이 "덮어씌우기" 된다.
+만약 위에서 padding을 사용하고 밑에선 선언을 안했다면 padding 또한 그대로 사용된다.
+*/
+.영역1번 {
+  background-color: red;
+}

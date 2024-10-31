@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>할로윈 스페셜</title>
+    <style>
+      body {
+        background-color: #1a1a1a;
+        color: #f5f5f5;
+      }
+
+      .banner {
+        background-image: url(../image/halloween-banner.png);
+        width: 100%;
+        height: 600px;
+        background-position: center;
+        background-size: cover;
+        color: #f39c12;
+        font-size: 40px;
+      }
+
+      h2 {
+        color: orange;
+        text-align: center;
+        text-shadow: 0 8px 1px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        text-shadow: 0 8px 4px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+
+      ul {
+        list-style: none;
+        display: flex; /* 가로 정렬 */
+        justify-content: space-around; /* 간격 주기 */
+        flex-wrap: wrap; /* 무조건 한 줄로 정렬 */
+      }
+
+      ul li {
+        background-color: #333;
+        padding: 15px;
+        border-radius: 5px;
+        width: 150px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        text-shadow: 0px 3px 2px rgba(253, 103, 15, 0.765);
+      }
+
+      .story {
+        background-color: #222;
+        padding: 20px;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+
+      .story p {
+        text-shadow: 0 8px 4px rgba(246, 7, 7, 0.61);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="banner">Happy Halloween!</div>
+      <div class="content">
+        <h2>할로윈 소개</h2>
+        <p>
+          할로윈은 매년 10월 31일에 즐기는 축제 입니다. 귀신, 마녀, 좀비 가은
+          분장을 하고 다양한 소품으로 장식된 집에서 친구들과 함께 무서운
+          이야기를 즐기는 날입니다.
+        </p>
+
+        <h2>할로윈 소품</h2>
+        <ul>
+          <li>호박 랜턴</li>
+          <li>해골 모형</li>
+          <li>거미줄 장식</li>
+          <li>유령 인형</li>
+          <li>마녀 모자</li>
+        </ul>
+
+        <h2>무서운 이야기</h2>
+        <div class="story">
+          <p>
+            한 번도 본 적 없는 집에서 이상한 소리가 들리기 시작했어요.
+            걸어다니는 듯한 소리. 그 소리가 점점 가까워지더니 결국 문 앞에
+            멈추었어요...
+          </p>
+        </div>
+        <!-- story -->
+      </div>
+      <!-- content -->
+    </div>
+    <!-- container -->
+  </body>
+</html>

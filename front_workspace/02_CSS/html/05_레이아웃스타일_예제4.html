@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float를 이용한 스타일</title>
+    <style>
+      .container {
+        width: 600px;
+        margin: 0 auto;
+        border: 2px solid #ddd;
+        padding: 20px;
+        background-color: #f9f9f9;
+        box-sizing: border-box;
+      }
+      .imagebox {
+        width: 100px;
+        height: 100px;
+        float: left;
+        margin-right: 15px;
+        background-color: #bbb;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        display: flex; /* block으로 되어 있는 형식을 inline 형식으로 가로로 정렬시키는 것 */
+        justify-content: center; /* 가로로 정렬시킨 요소를 자동으로 너비를 일정하게 해줌 */
+        align-items: center; /* 글자로 작성된 문장을 하나의 아이템으로 보는 것으로 세로 기준 가운데 정렬 */
+        /* text : 가로 정렬 , items : 세로정렬 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>float 과 clear를 활용한 정렬 예제</h2>
+
+      <!-- 이미지 박스 -->
+      <div class="imagebox">이미지</div>
+
+      <!-- 텍스트 박스 -->
+    </div>
+  </body>
+</html>

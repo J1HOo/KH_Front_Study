@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content 와 align-items 활용하기</title>
+    <style>
+      .container {
+        display: flex;
+        height: 200px;
+        background-color: #f0f8ff;
+      }
+
+      .container div {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>justify-content 와 align-items 활용하기</h1>
+
+    <h4>1번 : 모든 아이템이 컨테이너의 가운데 중앙에 배치하기</h4>
+    <div class="container" style="justify-content: center; align-items: center">
+      <div style="background-color: lightcoral">아이템 1</div>
+      <div style="background-color: lightblue">아이템 2</div>
+      <div style="background-color: lightcoral">아이템 3</div>
+    </div>
+
+    <h4>
+      2번 : 아이템이 컨테이너 상단에 정렬 양쪽 끝 여백x 요소들 여백 동일하게
+      배치
+    </h4>
+    <div
+      class="container"
+      style="justify-content: space-between; align-items: flex-start"
+    >
+      <div style="background-color: lightcoral">아이템 1</div>
+      <div style="background-color: lightblue">아이템 2</div>
+      <div style="background-color: lightcoral">아이템 3</div>
+    </div>
+
+    <h4>
+      3번 : 아이템 컨테이너의 하단에 정렬 양쪽 끝 1/2 여백 주고 안에 요소 통일
+      배치
+    </h4>
+    <div
+      class="container"
+      style="justify-content: space-around; align-items: end"
+    >
+      <div style="background-color: lightcoral">아이템 1</div>
+      <div style="background-color: lightblue">아이템 2</div>
+      <div style="background-color: lightcoral">아이템 3</div>
+    </div>
+
+    <h4>4번 : 아이템 컨테이너 높이에 맞춰 늘어남 왼쪽 정렬</h4>
+    <div class="container" style="justify-content: start; align-items: stretch">
+      <div style="background-color: lightcoral">아이템 1</div>
+      <div style="background-color: lightblue">아이템 2</div>
+      <div style="background-color: lightcoral">아이템 3</div>
+    </div>
+
+    <h4>5번 : 아이템 컨테이너 세로 한 가운데 위치하고 오른쪽 정렬</h4>
+    <div class="container" style="justify-content: end; align-items: center">
+      <div style="background-color: lightcoral">아이템 1</div>
+      <div style="background-color: lightblue">아이템 2</div>
+      <div style="background-color: lightcoral">아이템 3</div>
+    </div>
+
+    <h4>6번 : 아이템들이 컨테이너 상단에 정렬 가운데 중앙 배치</h4>
+    <div class="container" style="justify-content: center; align-items: start">
+      <div style="background-color: lightcoral">아이템 1</div>
+      <div style="background-color: lightblue">아이템 2</div>
+      <div style="background-color: lightcoral">아이템 3</div>
+    </div>
+  </body>
+</html>

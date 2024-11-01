@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex wrap</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+
+        /* 
+        justify-contentL space-속성 : 여백 자동 설정
+        gap : 여백을 내가 원하는 값만큼 지정해서 줄 수 있음
+        */
+        gap: 10px;
+        padding: 10px;
+        background-color: #ddd;
+      }
+
+      .container div {
+        padding: 20px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flex flex-wrap 활용하기</h1>
+    <pre>
+      display : flex 가로로 정렬 기존에 있던 block 성질을 변경 했기 때문에 가능
+
+      flex-wrap : 컨테이너 안에 있는 여러개의 아이템이 작은 화면에서도 여러 줄에 걸쳐 배치되도록 설정
+      
+      반응형 디자인
+      반응형이란 ? 화면에서 화면의 가로 크기에 따라 사용자에게 거부감 없는 화면을 제공하는 것
+        본체 모니터: 800px ~ 1400px
+        테블릿: 500px ~ 700px
+        핸드폰: 300px ~ 400px
+    </pre>
+
+    <h3>display:flex 와 flex-wrap: wrap 활용하기</h3>
+    <div class="container">
+      <div style="background-color: lightcoral">상의</div>
+      <div style="background-color: lightblue">하의</div>
+      <div style="background-color: lightgreen">악세서리</div>
+      <div style="background-color: lightpink">신발</div>
+      <div style="background-color: lightyellow">고객센터</div>
+    </div>
+
+    <style>
+      .container2 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: #ddd;
+        gap: 15px;
+        padding: 20px;
+      }
+      .container2 div {
+        padding: 20px;
+        width: 100px;
+        text-align: center;
+        border-radius: 5px;
+      }
+    </style>
+    <h3>display:flex 와 flex-wrap: wrap, justify-content 활용하기</h3>
+    <div class="container2">
+      <div style="background-color: lightcoral">상의</div>
+      <div style="background-color: lightblue">하의</div>
+      <div style="background-color: lightgreen">악세서리</div>
+      <div style="background-color: lightpink">신발</div>
+      <div style="background-color: lightyellow">고객센터</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+/* 3순위 : id 선택자 */
+#아이디속성 {
+  background-color: black;
+}
+
+/* 4순위 : 클래스 선택자 */
+.클래스속성 {
+  background-color: green;
+}
+
+/* 5순위 : 태그 선택자 */
+div {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  color: white;
+}
+
+div {
+  background-color: violet !important; /* 1순위 : !important */
+}
+
+/* !important : 스타일의 속성이 의도한 바와 다르게 다른 곳에서 적용되었을 때 사용되는 값 */
+
+/* 겹치는 속성만 우선순위가 결정된다. 나머진 모두 적용
+  ex) color: white;, width: 200px;, height: 200px;는 5순위지만 적용이 되고 있음  */

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>display 속성</title>
+  </head>
+  <body>
+    <h1>display 속성</h1>
+
+    <pre>
+      display 속성은 html 요소의 배치 방식을 설정하는 중요한 css 속성
+      
+      display 주요 속성
+        block, inline, inline-block, flex, grid, inline-flex
+      
+      모든 태그에는 display가 각 속성에 맞게 기본 설정이 되어 있음
+
+      display: block -> div, p, h1 ~ h6 등
+        ex) h1 = display: block, font-size: 32px, font-weight: bold 등의 집합체
+
+      display: inline -> span, a, strong 등 
+        ex) span = display: inline, font-size: 16px 등의 집합체
+
+      display: inline-block -> img, button 
+  
+      기본적으로 각 태그에 기본 스타일이 적용되어 있음
+      이를 커스텀 하고자 할 때 css를 이용해 변화를 주는 것
+    </pre>
+
+    <h3>display: flex</h3>
+    <pre>
+      flex 요소는 내부 항목들이 수평 수직으로 유연하게 정렬
+      inline = 가로 세로 조정 X 즉 자식 요소의 내용물의 사이즈 만큼만 차지
+      flex = 가로 세로 조정 O 내용물 사이즈와 관계 없이 늘릴 수 있음
+    </pre>
+    <div style="display: flex">
+      <div style="background-color: lightpink; padding: 20px">Flex item1</div>
+      <div style="background-color: lightyellow; padding: 20px">Flex item2</div>
+      <div style="background-color: lightblue; padding: 20px">Flex item3</div>
+    </div>
+
+    <h3>display: grid</h3>
+    <pre>
+      행과 열로 내부 항목
+      주로 이미지나 웹툰 처럼 틀과 형식으로 규칙적인 정렬이 필요할 때 많이 사용
+
+      fr : fraction -> 일부 라는 뜻으로 그리드 내에서 사용 가능한 공간을 비율로 나누는 단위를 말함
+
+      1fr : 그리드 공간을 같은 비율로 나눠 차지
+      1fr 1fr : 두 개의 열이 동일하게 공간을 나눠 차지
+      1fr 2fr : 첫 번째 열은 가로 전체 공간의 1/3 차지, 두 번째 열은 가로 전체 공간의 2/3 차지
+
+      gap : 그리드와 셀 사이의 간격을 주는 속성
+
+    </pre>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px">
+      <div style="background-color: lightcoral; padding: 20px">Grid item 1</div>
+      <div style="background-color: lightblue; padding: 20px">Grid item 2</div>
+      <div style="background-color: lightgreen; padding: 20px">Grid item 3</div>
+      <div style="background-color: lightyellow; padding: 20px">
+        Grid item 4
+      </div>
+    </div>
+
+    <br />
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px">
+      <div style="background-color: lightgreen; padding: 20px">Grid item 1</div>
+      <div style="background-color: lightblue; padding: 20px">Grid item 2</div>
+      <div style="background-color: lightpink; padding: 20px">Grid item 3</div>
+    </div>
+  </body>
+</html>

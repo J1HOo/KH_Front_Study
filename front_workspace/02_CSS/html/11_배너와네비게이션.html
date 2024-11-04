@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배너 및 네이게이션</title>
+    <style>
+      /* body에 혹시 모를 여백이 남을 수 있어 margin 0; 속성을 부여 */
+      /* div로 인해 생기는 여백 없애는 것 */
+      body {
+        margin: 0;
+      }
+      /* 배너 스타일 */
+      .banner {
+        background-color: yellowgreen;
+        color: white;
+        text-align: center;
+        padding: 60px 0;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      /* 네비게이션 스타일 */
+      /*
+        ul 태그 내에 기본적으로 상하 여백이 존재
+        이 기본 값을 상쇄하기 위해 margin 0; padding 0; 속성 부여
+      */
+      .nav {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        background-color: #333;
+        padding: 0px;
+        margin: 0;
+      }
+
+      /* a태그는 inline 이기 때문에 padding이 동작하지 않음 이땐 display:block 사용 */
+      .nav a {
+        color: white;
+        display: block;
+        padding: 14px 20px;
+        text-decoration: none; /* 밑줄 제거 */
+        font-weight: bold;
+      }
+      .nav a:hover {
+        background-color: #555;
+      }
+
+      /*blog section style */
+      .blog {
+        width: 800px;
+        margin: 50px auto;
+        padding: 20px;
+        /*
+          0px : 오른쪽으로 얼만큼
+          4px : 아래쪽으로 얼만큼
+          12px : 얼마나 뿌옇게
+          rgba(0, 0, 0) : 색
+          rgba(, , ,0.1 ~ 1.0) 불투명도
+        */
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .post {
+        background-color: #f9f9f9;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+      }
+
+      .post h2 {
+        color: yellowgreen;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .post h2 span {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 배너 -->
+    <div class="banner">웹사이트에 오신 것을 환영합니다.</div>
+    <!-- 네비게이션 -->
+    <ul class="nav">
+      <li><a href="#">HOME</a></li>
+      <li><a href="#">소개</a></li>
+      <li><a href="#">서비스</a></li>
+      <li><a href="#">연락하기</a></li>
+    </ul>
+
+    <!-- blog section -->
+    <div class="blog">
+      <div class="post">
+        <h2>첫 번째 블로그 포스트</h2>
+        <p>안녕하세요. 블로그를 오픈했습니다. 많은 관심 부탁드려요.</p>
+      </div>
+
+      <div class="post">
+        <h2><span>&#x1f36A;</span> 쿠키 만들기 포스팅!</h2>
+        <p>밀가루에 우유와 계란을 넣고 반죽을 한다.</p>
+        <p>설탕과 초콜릿칩을 넣는다.</p>
+        <p>오븐에서 20분 구워준다.</p>
+      </div>
+
+      <div class="post">
+        <h2>개발 공부하기: 코딩 HTML 편</h2>
+        <p>DOCTYPE은 Document Type의 줄임말이다.</p>
+        <p>문서 타입의 html로 html5 설정을 위해 넣는다.</p>
+      </div>
+    </div>
+  </body>
+</html>

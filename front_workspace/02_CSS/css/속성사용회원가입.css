@@ -62,11 +62,6 @@ h1 {
   color: #555;
 }
 
-input[type="file"],
-#file {
-  display: none;
-}
-
 .signup-container input[type="text"],
 .signup-container input[type="email"],
 .signup-container input[type="password"],
@@ -79,13 +74,29 @@ input[type="file"],
   font-size: 14px;
 }
 
-/* 체크박스와 라디오 버튼 스타일 */
+/* profile */
+label[for="profile"] {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="file"],
+#file {
+  display: none;
+}
+
+/* checkbox, radio input */
 .signup-container input[type="checkbox"],
 .signup-container input[type="radio"] {
   margin-right: 8px;
 }
 
-/* 버튼 스타일 */
+/* button */
 .signup-container button {
   width: 100%;
   padding: 12px;

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex box container</title>
+    <style>
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1000px;
+        background-color: #f0f0f0;
+      }
+
+      .box1,
+      .box2,
+      .box3 {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .box1 {
+        background-color: lightblue !important;
+      }
+
+      .box2 {
+        background-color: lightcoral !important;
+      }
+
+      .box3 {
+        background-color: lightyellow !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>flex box container</h1>
+    <div class="container">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+    </div>
+  </body>
+</html>

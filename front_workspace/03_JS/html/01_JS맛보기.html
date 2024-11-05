@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 맛보기</title>
+  </head>
+  <body>
+    <h1>JavaScript 기능을 사용해 배경색 변경하기</h1>
+
+    <script>
+      function 기능이름() {
+        //alert : 알림, 경고창
+        alert("기능이 생성된 버튼 클릭");
+      }
+
+      // 특정 동작이 진행되길 원할 때 함수명을 설정하고 함수명 안에 동작하고자 하는 기능을 서술
+      // function : 기능, 함수를 사용함을 선언한다는 표기
+      // function 함수명(params) {동작하고자 하는 기능}
+    </script>
+
+    <h3>권장하는 사용 방식</h3>
+    <button onclick="기능이름()">기능이 생성된 버튼 클릭하기</button>
+
+    <h4>권장하지 않는 사용 방식</h4>
+    <button onclick="alert('버튼 클릭')">버튼 클릭하기</button>
+
+    <br />
+    <br />
+
+    <!--
+      <button onclick="">
+        onclick : 클릭했을 때 "" 안의 기능 동작
+        버튼이 클릭 되었을 때 버튼클릭() 기능을 불러와 실행
+
+    -->
+    <button onclick="버튼클릭()">버튼 클릭</button>
+    <script src="../js/01_JS맛보기.js"></script>
+  </body>
+</html>

@@ -18,3 +18,11 @@ function plus() {
   count += input; //count에 input의 value값을 버튼을 누를 때 마다 플러스해서 저장
   result.innerText = count; //count에 임시 저장된 현재 값을 result로 넘겨줌
 }
+
+function mul() {
+  const result = document.getElementById("result1");
+  const input = Number(document.getElementById("input1").value);
+
+  count *= input; //count에 input의 value값을 버튼을 누를 때 마다 곱해서 저장
+  result.innerText = count; //count에 임시 저장된 현재 값을 result로 넘겨줌
+}

@@ -3,14 +3,19 @@ function checkGrade() {
   const gradeMsg = document.getElementById("gradeMsg");
 
   if (inputScore >= 90) {
-    gradeMsg.innerText = "A";
+    gradeMsg.innerText = "A 등급 입니다.";
+    gradeMsg.className = "A";
   } else if (inputScore >= 80) {
-    gradeMsg.innerText = "B";
+    gradeMsg.innerText = "B 등급 입니다.";
+    gradeMsg.className = "B";
   } else if (inputScore >= 70) {
-    gradeMsg.innerText = "C";
+    gradeMsg.innerText = "C 등급 입니다.";
+    gradeMsg.className = "C";
   } else if (inputScore >= 60) {
-    gradeMsg.innerText = "C";
+    gradeMsg.innerText = "D 등급 입니다.";
+    gradeMsg.className = "D";
   } else {
-    gradeMsg.innerText = "F";
+    gradeMsg.innerText = "F 등급 입니다.";
+    gradeMsg.className = "F";
   }
 }

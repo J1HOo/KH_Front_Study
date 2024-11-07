@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>회원가입</title>
+    <style>
+      #hint {
+        display: none;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      required -> form 태그에서 주로 사용, 필수 입력란으로 지정 작성하지 않을시 toast msg를 띄움
+
+      from 태그 안에 button : form태그에 작성한 action 속성에 있는 동작을 해줌 즉 서로 연결 되어 있음
+
+    -->
+    <h1>회원가입 하기</h1>
+    <form action="회원가입성공.html">
+      <label>아이디 : </label>
+      <input type="text" name="user-id" required />
+
+      <br />
+
+      <label>비밀번호 : </label>
+      <input
+        type="password"
+        name="user-pw"
+        required
+        onfocus="힌트보기()"
+        onblur="힌트숨기기()"
+      />
+      <p id="hint">영문자 대/소문자, 특수문자, 숫자 포함 8 ~ 32자 이내</p>
+
+      <br />
+
+      <button onclick="signUp()">회원가입하기</button>
+    </form>
+  </body>
+  <script>
+    const h = document.getElementById("hint");
+    function 힌트보기() {
+      h.style.display = "block"; // 보고자 하는 input 값 속성에 onfocus로 작성하면 보이게 됨
+    }
+    function 힌트숨기기() {
+      h.style.display = "none"; //숨기고자 하는 input 값 속성에 onblur로 작성하면 안보이게 됨
+    }
+    /*
+    onclick : 사용자가 onclick 이라는 속성을 지닌 요소를 클릭했을 때 발생
+    사용 용도 : 버튼 클릭, 링크 클릭, 이미지 클릭 등 클릭이 트리거가 되어 속성이 작동함
+    
+    onfocus : 사용자가 input과 같은 입력 필드를 선택하거나 포커스가 맞춰질 때 작동함
+    사용 용도 : input, textarea 요소 등에서 많이 사용
+
+    onblur : 사용자가 선택한 필드에서 벗어 났을 때 작동함
+    */
+  </script>
+</html>

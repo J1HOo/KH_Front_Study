@@ -7,13 +7,6 @@ function selectSeason() {
     choice = prompt("1월 ~ 12월 계절을 선택해주세요.");
 
     switch (choice) {
-      case "1":
-      case "2":
-      case "12":
-        result.innerText = "겨울을 선택하셨습니다.";
-        body.style.backgroundColor = "lightblue";
-        return;
-
       case "3":
       case "4":
       case "5":
@@ -33,6 +26,13 @@ function selectSeason() {
       case "11":
         result.innerText = "가을을 선택하셨습니다.";
         body.style.backgroundColor = "sandybrown";
+        return;
+
+      case "1":
+      case "2":
+      case "12":
+        result.innerText = "겨울을 선택하셨습니다.";
+        body.style.backgroundColor = "lightblue";
         return;
 
       case "종료":

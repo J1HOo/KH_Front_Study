@@ -63,3 +63,60 @@ function check4() {
   // 담고 결과2로 b의 모든 값을 출력
   alert(결과2);
 }
+
+/*
+  while문 기본 구조
+  while(조건식) {
+    반복할 코드
+    }
+*/
+function while1() {
+  let num1 = 1;
+  while (num1 <= 5) {
+    alert("num1의 합은 " + num1 + " 입니다.");
+    num1++; // num1 = num1 + 1
+  }
+}
+
+function while2() {
+  let num2 = 1;
+  while (num2 <= 10) {
+    console.log("======== while2의 버튼 ========");
+    console.log("num2의 합은 " + num2 + " 입니다.");
+    num2++;
+  }
+}
+
+function while3() {
+  let num3 = 1;
+
+  while (num3 <= 10) {
+    console.log("======== while3의 버튼 ========");
+    console.log("num3의 합은 " + num3 + " 입니다.");
+    num3++;
+
+    if (num3 == 5) {
+      break;
+    }
+  }
+}
+
+// 지역변수 안에서만 사용하는 변수를 생성할 경우 {} 안에 변수를 생성
+function while4() {
+  let num4 = 0;
+  while (num4 <= 20) {
+    num4++;
+    console.log(num4);
+  }
+}
+
+function while5() {
+  let num5 = 5;
+  while ((num5 = 20)) {
+    console.log("숫자는 " + num5 + " 입니다.");
+    num5++;
+    if (num5 == 15) {
+      break; //숫자가 15가 되면 위에서 진행하던 코드 모두 중지
+    }
+  }
+}

@@ -86,7 +86,7 @@
       //만약 출금할 금액이 잔액보다 클 경우 , amount.value이용하기.
 
       function 입금기능() {
-        const amount = document.getElementById("amount");
+        const amount = document.getElementById("amount").value;
 
         if (amount) {
           balance += Number(amount.value); //더하기: 이어붙이기와 더하기 Number

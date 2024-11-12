@@ -1,4 +1,4 @@
-let totalPrice = 0;
+let totalCount = 0;
 
 function 선택(param) {
   const price = document.getElementById("price");
@@ -17,5 +17,8 @@ function 선택(param) {
       coffeePrice = 8000;
       break;
   }
-  price.innerText = "총 금액 : ₩" + (totalPrice += coffeePrice);
+
+  totalCount += coffeePrice;
+  price.innerText = `총 금액 : ₩${totalCount}`;
+  // price.innerText = "총 금액 : ₩" + (totalCount += coffeePrice);
 }

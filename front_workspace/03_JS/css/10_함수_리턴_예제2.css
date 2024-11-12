@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  height: 100vh;
+  background-color: #fff726;
+  color: #6b4226;
+}
+
+button {
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f4a460;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #6b4226;
+}
+
+h3 {
+  font-size: 20px;
+}

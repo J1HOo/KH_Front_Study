@@ -1,23 +1,19 @@
-function 빵구매(params1) {
-  const price = 빵구매(params1);
+function 빵구매(abc) {
+  const price = 빵가격(abc);
   const result = document.getElementById("result");
-
-  if (params1 > 0) {
-    result.innerText = params1 + " 구매 완료되었습니다.";
-  } else if (price > 0) {
+  if (price > 0) {
     result.innerText =
-      params1 + " 구매 완료되었습니다." + " 가격은" + price + " 원 입니다.";
+      abc + " 구매 완료되었습니다. 가격은 " + price + " 원 입니다.";
   } else {
-    result.innerText = "아직 판매 예정 입니다.";
+    result.innerText = "아직 판매 예정입니다.";
   }
 }
-
-function 빵가격(params2) {
-  if (params2 === "크루아상") {
+function 빵가격(abc) {
+  if (abc === "크루아상") {
     return 3000;
-  } else if (params2 === "식빵") {
+  } else if (abc === "식빵") {
     return 2000;
-  } else if (params2 === "베이글") {
+  } else if (abc === "베이글") {
     return 2500;
   } else {
     return 0;

@@ -4,25 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>음료 주문하기</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-      }
-
-      button {
-        border: none;
-        border-radius: 10px;
-        font-size: 20px;
-        padding: 10px 20px;
-      }
-
-      button:hover {
-        background-color: lightyellow;
-      }
-    </style>
+    <link rel="stylesheet" href="../css/09_분기문과제1.css" />
   </head>
   <body>
     <h1>음료 주문하기</h1>
@@ -33,27 +15,5 @@
       <h2 id="price"></h2>
     </div>
   </body>
-  <script>
-    let totalPrice = 0;
-
-    function 선택(param) {
-      const price = document.getElementById("price");
-      let coffeePrice = 0;
-
-      switch (param) {
-        case "1":
-          coffeePrice = 3000;
-          break;
-
-        case "2":
-          coffeePrice = 5500;
-          break;
-
-        case "3":
-          coffeePrice = 8000;
-          break;
-      }
-      price.innerText = "총 금액 : ₩" + (totalPrice += coffeePrice);
-    }
-  </script>
+  <script src="../js/09_분기문과제1 .js"></script>
 </html>

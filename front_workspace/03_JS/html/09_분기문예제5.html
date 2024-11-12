@@ -3,57 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>음료 주문하기</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-      }
-
-      button {
-        border: none;
-        border-radius: 10px;
-        font-size: 20px;
-        padding: 10px 20px;
-      }
-
-      button:hover {
-        background-color: lightyellow;
-      }
-    </style>
+    <title>분기문 예제5</title>
   </head>
   <body>
-    <h1>음료 주문하기</h1>
-    <div>
-      <button onclick="선택('1')">아메리카노 (&#8361; 3,000)</button>
-      <button onclick="선택('2')">카페라떼 (&#8361; 5,500)</button>
-      <button onclick="선택('3')">디카페인 (&#8361; 8,000)</button>
-      <h2 id="price"></h2>
-    </div>
+    <h1>switch case 문을 활용해서 글자 표현하기</h1>
+    <button onclick="선택('cola')">1. 코카콜라 (500원)</button>
+    <button onclick="선택('fanta')">2. 환타 (600원)</button>
+    <button onclick="선택('soda')">3. 사이다 (700원)</button>
+    <h2 id="total">총 금액 : 0원</h2>
   </body>
   <script>
-    let totalPrice = 0;
+    let totalPrice = 0; //전역 변수로 설정, 지역 변수시 버튼 클릭시 마다 초기화
 
-    function 선택(param) {
-      const price = document.getElementById("price");
-      let coffeePrice = 0;
+    function 선택(params) {
+      //파라미터 매개변수 ^
+      const total = document.getElementById("total");
 
-      switch (param) {
-        case "1":
-          coffeePrice = 3000;
+      switch (params) {
+        case "cola":
+          totalPrice += 500;
           break;
 
-        case "2":
-          coffeePrice = 5500;
+        case "fanta":
+          totalPrice += 600;
           break;
-
-        case "3":
-          coffeePrice = 8000;
+        case "soda":
+          totalPrice += 700;
           break;
       }
-      price.innerText = "총 금액 : ₩" + (totalPrice += coffeePrice);
+      total.innerText = "총 금액 : " + totalPrice;
     }
   </script>
 </html>

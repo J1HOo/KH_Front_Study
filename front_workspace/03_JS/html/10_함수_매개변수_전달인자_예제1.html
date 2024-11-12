@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>결혼정보회사 소개팅 준비</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button {
+        border: none;
+        padding: 10px;
+        font-size: 10px 20px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>소개팅 대상자 선택</h2>
+    <button onclick="결정사('홍길동')">홍길동님과 소개팅 준비</button>
+    <button onclick="결정사('박영철')">박영철님과 소개팅 준비</button>
+    <button onclick="결정사('강철수')">강철수님과 소개팅 준비</button>
+    <h2 id="result">여기에 소개팅 결과가 표시됩니다.</h2>
+    <script>
+      const result = document.getElementById("result");
+
+      // 소개팅대상 = 매개변수  홍길동, 박영철, 강철수
+      function 결정사(소개팅대상) {
+        result.innerText = 소개팅대상 + " 님과 소개팅을 준비합니다.";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>name 속성으로 요소 접근하기</title>
+    <link rel="stylesheet" href="../css/13_요소접근_이름1.css" />
+  </head>
+  <body>
+    <h1>name으로 요소 접근하기</h1>
+    <small>
+      name 속성은 input 또는 input 관련 태그만 기본 속성으로 가지고 있음.
+    </small>
+
+    <table>
+      <tr>
+        <!-- 
+        요소를 가져오는 경우 대개 innerText 사용 하지만 input 형식같은
+        innerText가 없는 태그는 value를 사용해 데이터를 가져감
+        -->
+        <td>
+          <input type="checkbox" name="취미" id="game" value="게임" />
+          <label for="game">게임</label>
+        </td>
+        <td>
+          <input type="checkbox" name="취미" id="music " value="음악감상" />
+          <label for="music">음악감상</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <!--
+          value 값을 지정하지 않았을 때
+          checkbox, radio = on = value 속성이 없을 때 기본 값으로 체크 되었음을 표기
+            text    number = 빈 값
+          -->
+          <input type="checkbox" name="취미" id="book " value="독서" />
+          <label for="book">독서</label>
+        </td>
+        <td>
+          <input type="checkbox" name="취미" id="coding " value="코딩" />
+          <label for="coding">코딩</label>
+        </td>
+      </tr>
+    </table>
+
+    <div id="result"></div>
+    <button onclick="nameBtn()">선택된 취미만 출력하기</button>
+    <script src="../js/13_요소접근_이름1.js"></script>
+  </body>
+</html>

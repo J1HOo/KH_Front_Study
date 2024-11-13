@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이름 속성을 활용해서 checkbox radio 활용하기</title>
+  </head>
+  <body>
+    <h1>이름 속성을 활용해서 checkbox radio 활용하기</h1>
+    <input type="checkbox" name="hobby" id="music" value="음악감상 " />
+    <label for="music">음악 감상</label>
+
+    <input type="checkbox" name="hobby" id="sports" value="운동 " />
+    <label for="sports">운동</label>
+    <input type="checkbox" name="hobby" id="trip" value="여행 " />
+    <label for="trip">여행</label>
+
+    <button onclick="checkHobby()">확인</button>
+    <p id="result"></p>
+    <script src="../js/13_요소접근_이름2.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 접근 방법</title>
+  </head>
+  <body>
+    <h1>DOM(Document Object Model)</h1>
+    <pre>
+    웹 문서(HTML)의 모든 요소를 객체 형식으로 표현한 것
+    (HTML 요소 == JS에서 객체라고 부름)
+
+    -> 문서 내 특정 요소 접근 가능
+        + 요소(객체)에 속성 값을 세팅 또는 얻어올 수 있음
+
+        document.getElementById("아이디 값")
+        document : html 문서
+        . : 문서 안에서
+        getElementById("") : 요소들 중 괄호 안의 값과 동일한 아이디 값을 가진 요소를 가져오겠다.
+    </pre>
+
+    <hr />
+
+    <h1>DOM을 이용한 요소 접근하기</h1>
+    <pre>
+      * 객체 : HTML : 요소 == JS : 객체
+      1. id로 접근하기 : document.getElementById("아이디 속성 값");
+          -> 아이디가 일치하는 요소(객체)를 얻어옴
+
+      2. class로 접근하기 : document.getElementsByClassName("클래스 속성값");
+          -> 클래스가 일치하는 모든 요소를 얻어와 배열 형태로 변환
+
+      3. name으로 접근하기 : document.getElementsByName("네임 속성값");
+          -> name이 일치하는 모든 요소를 얻어와 배열(NodeList, 유사배열) 형태로 반환
+
+      4. tag로 접근하기 : document.getElementsByTagName("태그 속성값");
+          -> 태그가 일치하는 모든 요소를 얻어와 배열(NodeList, 유사배열) 형태로 반환
+
+      5. CSS 선택자로 접근하기
+          1. document.querySelector("CSS 선택자");
+              -> 선택자가 선택한 요소 중 첫 번째 요소를 반환
+          
+          2. document.querySelectorAll("CSS 선택자");
+              -> 선택한 요소 모두 베열(NodeList, 유사배열) 형태로 반환
+
+        *** NodeList, 유사배열이란?
+        배열 = [ ] : 순차적으로 값을 묶어 담는 것
+        유사배열 : 배열처럼 여러 요소들을 담고 있지만 진짜 배열은 아님
+                  map,filter 와 같은 배열 기능을 사용할 수 없음
+                  대신 forEach문을 사용해서 접근 가능
+
+    </pre>
+  </body>
+</html>

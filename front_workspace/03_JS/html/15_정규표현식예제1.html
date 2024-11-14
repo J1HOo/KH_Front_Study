@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이름 형식 검사</title>
+    <style>
+      .good {
+        color: green;
+      }
+
+      .bad {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>이름 형식 검사</h1>
+    <p>이름을 입력하세요. (2~5자 한글)</p>
+    <input type="text" id="nameInput" />
+    <button onclick="checkName()">확인</button>
+    <p id="result"></p>
+
+    <script>
+      function checkName() {
+        const nameInput = document.getElementById("nameInput").value;
+        const result = document.getElementById("result");
+        const nameRegex = /^[가-힣]{2,5}$/;
+
+        if (nameRegex.test(nameInput)) {
+          result.innerText = "유효한 형식의 이름입니다.";
+          result.className = "good";
+        } else {
+          result.innerText = "유효한 형식의 이름이 아닙니다.";
+          result.className = "bad";
+        }
+      }
+    </script>
+
+    <hr />
+
+    <h1>휴대폰번호 형식 검사</h1>
+    <input type="text" id="inputPhone" />
+    <button onclick="checkPhone()">휴대폰 번호 확인</button>
+    <div id="phoneResult"></div>
+
+    <script>
+      function checkPhone() {
+        const inputPhone = document.getElementById("inputPhone").value;
+        const phoneResult = document.getElementById("phoneResult");
+        const phoneRegex = /^[0-9]{10,11}$/; //숫자 10~11자
+
+        if (phoneRegex.test(inputPhone)) {
+          result.innerText = "유효한 형식의 전화번호입니다.";
+          result.className = "good";
+        } else {
+          result.innerHTML =
+            "유효한 형식의 전화번호가 아닙니다. <br> 010이나 011로 시작해주세요.";
+          result.className = "bad";
+        }
+      }
+    </script>
+  </body>
+</html>

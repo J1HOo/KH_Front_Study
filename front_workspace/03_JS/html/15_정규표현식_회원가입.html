@@ -18,9 +18,7 @@
           required
           onblur="idMsg()"
         />
-        <p id="idMsg" style="display: none">
-          영어 대/소문자, 숫자, 특수문자(-,_)포함 6글자 이상 16글자 이하로 작성
-        </p>
+        <p id="idMsg"></p>
 
         <label>비밀번호</label>
         <input
@@ -30,10 +28,7 @@
           required
           onblur="pwMsg()"
         />
-        <p id="pwMsg" style="display: none">
-          영어 대/소문자, 숫자, 특수문자(!@#$%^&*)포함 8글자 이상 20글자 이하로
-          작성
-        </p>
+        <p id="pwMsg"></p>
 
         <label>비밀번호 확인</label>
         <input
@@ -43,9 +38,7 @@
           onblur="pwConfirmMsg()"
           required
         />
-        <p id="pwConfirmMsg" style="display: none">
-          비밀번호가 일치하지 않습니다.
-        </p>
+        <p id="pwConfirmMsg"></p>
 
         <label>이름</label>
         <input
@@ -55,12 +48,12 @@
           required
           onblur="nameMsg()"
         />
-        <p id="nameMsg" style="display: none">올바른 이름을 입력하세요.</p>
+        <p id="nameMsg"></p>
 
         <label>성별</label>
         <input type="radio" class="gender" name="성별" value="남자" />남자
         <input type="radio" class="gender" name="성별" value="여자" /> 여자
-        <p id="genderMsg" style="display: none">성별을 선택해주세요.</p>
+        <p id="genderMsg"></p>
 
         <button
           onclick="signUp(), genderMsg(), nameMsg(), pwMsg(), pwConfirmMsg(), idMsg()"

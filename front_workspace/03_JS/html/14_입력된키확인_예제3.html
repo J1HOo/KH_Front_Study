@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q W E E로 입력된 키 확인하기</title>
+    <link rel="stylesheet" href="../css/14_입력된키확인_예제3.css" />
+  </head>
+  <body onkeyup="keyUp(event)" onkeydown="keyDown(event)">
+    <div class="container">
+      <div class="kex-box">
+        <div class="key">Q</div>
+        <div class="key">W</div>
+        <div class="key">E</div>
+        <div class="key">R</div>
+      </div>
+    </div>
+
+    <script>
+      function keyUp(event) {
+        // const keys = document.querySelector(".key") : 클래스 이름이 "key"인 첫번째 요소
+        // const keys = document.querySelectorAll(".key") : 클래스 이름이 "key"인 모든 요소
+        const keys = document.querySelectorAll(".key");
+
+        let idx = 0; //index 줄임말
+
+        switch (event.key.toLowerCase()) {
+          case "q": //위의 작성한 toLow 덕분에 대문자 case 생략 처리 가능, Q 입력시 q로 자동 처리
+            idx = 0;
+            break;
+
+          case "w":
+            idx = 1;
+            break;
+
+          case "e":
+            idx = 2;
+            break;
+
+          case "r":
+            idx = 3;
+            break;
+
+          default:
+            return;
+        }
+        // idx 번호와 일치하는 keys 배열 요소 배경색 변경
+        keys[idx].style.backgroundColor = "white";
+      }
+
+      // 키에서 손을 뗐을 때 색 초기화
+      function keyDown(event) {
+        const keys = document.querySelectorAll(".key");
+
+        let idx = 0;
+
+        switch (event.key) {
+          case "q":
+            idx = 0;
+            break;
+
+          case "w":
+            idx = 1;
+            break;
+
+          case "e":
+            idx = 2;
+            break;
+
+          case "r":
+            idx = 3;
+            break;
+
+          default:
+            return;
+        }
+        keys[idx].style.backgroundColor = "yellowgreen";
+      }
+
+      // function keyDown(event) {
+      //   const keys = document.querySelectorAll(".key");
+
+      //   if (event.key.toLowerCase() === "q" ) {
+      //     keys[0].style.backgroundColor = "red";
+      //   } else if (event.key.toLowerCase() === "w" ) {
+      //     keys[1].style.backgroundColor = "blue";
+      //   } else if (event.key.toLowerCase() === "e" ) {
+      //     keys[2].style.backgroundColor = "green";
+      //   } else if (event.key.toLowerCase() === "r" ) {
+      //     keys[3].style.backgroundColor = "purple";
+      //   }
+      // }
+
+      // function keyUp(event) {
+      //   const keys = document.querySelectorAll(".key");
+
+      //   if (event.key.toLowerCase() === "q" ) {
+      //     keys[0].style.backgroundColor = "white";
+      //   } else if (event.key.toLowerCase() === "w" ) {
+      //     keys[1].style.backgroundColor = "white";
+      //   } else if (event.key.toLowerCase() === "e" ) {
+      //     keys[2].style.backgroundColor = "white";
+      //   } else if (event.key.toLowerCase() === "r" ) {
+      //     keys[3].style.backgroundColor = "white";
+      //   }
+      // }
+    </script>
+  </body>
+</html>

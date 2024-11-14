@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된 키 확인 Enter</title>
+    <style>
+      #inputBox {
+        width: 300px;
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      #msg {
+        font-size: 20px;
+        color: orange;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Enter 키를 입력했을 때 입력한 값 보여주기</h1>
+    <p>입력 창에서 Enter키를 눌러보세요.</p>
+    <input
+      type="text"
+      id="inputBox"
+      placeholder="Enter를 눌러보세요."
+      onkeydown="handleKeyDown(event)"
+      onkeyup="handleKeyUp(event)"
+    />
+
+    <!-- Enter를 입력했을 때 메시지가 보여질 공간 생성하기-->
+    <div id="msg"></div>
+
+    <script>
+      //키를 밑으로 눌렀을 때 기능
+      function handleKeyDown(event) {
+        console.log("키가 누르는 것을 확인하고 있습니다.");
+      }
+
+      //키를 뗐을 때 기능
+      function handleKeyUp(event) {
+        console.log("키가 눌렀다 떼는 것을 확인하고 있습니다.");
+
+        //Enter 클릭시 "안녕하세요."" 출력
+        if (event.key === "Enter") {
+          document.getElementById("msg").innerHTML += "안녕하세요.<br>";
+          // ``(백틱)은 안에 변수와 문자열을 함께 사용할 때 표기 `${변수명} 문자열`
+        }
+      }
+    </script>
+  </body>
+</html>

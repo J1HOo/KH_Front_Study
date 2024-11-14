@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력된 키 확인하기</title>
+    <style>
+      #inputBox {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>키 입력 이벤트 예제</h2>
+    <p>아래 입력 창에서 키를 누르거나 떼보세요.</p>
+
+    <input
+      type="text"
+      id="inputBox"
+      placeholder="키를 눌러보세요!"
+      onkeydown="키누르기(event)"
+      onkeyup="누르기끝(event)"
+    />
+
+    <script>
+      function 키누르기(event) {
+        console.log("키가 눌렸습니다.");
+      }
+
+      function 누르기끝(event) {
+        console.log("키에서 손을 뗐습니다.");
+      }
+    </script>
+  </body>
+</html>

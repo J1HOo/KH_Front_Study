@@ -1,0 +1,35 @@
+/* * : 모든 태그에 적용 */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 500px;
+  margin: 50px;
+}
+
+.key-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  border: 3px solid black;
+}
+
+.key {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 10px 0;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  user-select: none; /* 사용자가 특정 요소의 텍스트를 선택하지 못하도록 함 */
+}

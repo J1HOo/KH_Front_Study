@@ -8,16 +8,24 @@
   </head>
   <body>
     <h1>채팅 화면 구현하기</h1>
+    <!-- css .container-->
     <div class="container">
+      <!-- css #chatting-bg-->
       <div id="chatting-bg">
         <p><span>입력되는 채팅 보기</span></p>
         <p><span>입력되는 채팅 보기</span></p>
         <p><span>입력되는 채팅 보기</span></p>
       </div>
       <div id="chatting-input">
-        <input type="text" id="user-input" />
+        <!-- css #chatting-input-->
+        <input
+          type="text"
+          id="user-input"
+          onkeyup="키누르기(event)"
+        /><!-- css #user-input-->
         <button onclick="readValue()">입력하기</button>
       </div>
+      <script src="../js/13_요소접근_채팅.js"></script>
     </div>
   </body>
 </html>

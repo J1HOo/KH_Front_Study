@@ -5,10 +5,12 @@ function idMsg() {
   const idRegExp = /^[a-zA-Z0-9_-]{6,16}$/;
 
   if (idRegExp.test(idInput)) {
-    idMsg.style.display = "none";
+    idMsg.innerText = "사용할 수 있는 아이디입니다.";
+    idMsg.className = "success-msg";
   } else {
-    idMsg.style.display = "block";
     idMsg.className = "error-msg";
+    idMsg.innerText =
+      "영어 대/소문자, 숫자, 특수문자(-,_)포함 6글자 이상 16글자 이하로 작성";
   }
 }
 
@@ -20,9 +22,11 @@ function pwMsg() {
     /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$/;
 
   if (pwRegExp.test(pwInput)) {
-    pwMsg.style.display = "none";
+    pwMsg.innerText = "사용할 수 있는 비밀번호 입니다.";
+    pwMsg.className = "success-msg";
   } else {
-    pwMsg.style.display = "block";
+    pwMsg.innerText =
+      "영어 대/소문자, 숫자, 특수문자(!@#$%^&*)포함 8글자 이상 20글자 이하로 작성";
     pwMsg.className = "error-msg";
   }
 }
@@ -34,9 +38,10 @@ function pwConfirmMsg() {
   const pwConfirmMsg = document.getElementById("pwConfirmMsg");
 
   if (pw == pwConfirm) {
-    pwConfirmMsg.style.display = "none";
+    pwConfirmMsg.innerText = "비밀번호와 일치합니다.";
+    pwConfirmMsg.className = "success-msg";
   } else {
-    pwConfirmMsg.style.display = "block";
+    pwConfirmMsg.innerText = "비밀번와 일치하지 않습니다.";
     pwConfirmMsg.className = "error-msg";
   }
 }
@@ -48,9 +53,10 @@ function nameMsg() {
   const nameRegExp = /^[가-힣]{2,}$/;
 
   if (nameRegExp.test(nameInput)) {
-    nameMsg.style.display = "none";
+    nameMsg.innerText = "올바른 양식입니다.";
+    nameMsg.className = "success-msg";
   } else {
-    nameMsg.style.display = "block";
+    nameMsg.innerText = "올바른 이름을 입력하세요.";
     nameMsg.className = "error-msg";
   }
 }
@@ -61,9 +67,10 @@ function genderMsg() {
   const genderMsg = document.getElementById("genderMsg");
 
   if (gender) {
-    genderMsg.style.display = "none";
+    genderMsg.innerText = "항목을 선택하셨습니다.";
+    genderMsg.className = "success-msg";
   } else {
-    genderMsg.style.display = "block";
+    genderMsg.innerText = "성별을 선택해주세요.";
     genderMsg.className = "error-msg";
   }
 }

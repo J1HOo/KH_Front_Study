@@ -21,13 +21,22 @@
       <label>
         <input type="checkbox" id="policy1" />(필수) 이용약관 동의
       </label>
+      <br />
       <label>
         <input type="checkbox" id="policy2" />(필수) 개인정보 수집 및 이용 동의
       </label>
+      <br />
       <label>
         <input type="checkbox" id="policy3" />(필수) 마게팅 정보 수신 동의
       </label>
-      <button onclick="checkPolicy(event)">동의하고 회원가입</button>
+      <br />
+      <!-- 
+      type: button : 기본적으로 form을 제출하지 않아 JS에 있는 코드만 실행됨 -> action 무효 
+      type: submit : form에 있는 action 속성을 동작시킴 
+      -->
+      <button type="button" onclick="checkPolicy(event)">
+        동의하고 회원가입
+      </button>
     </form>
 
     <script src="241115_공통.js"></script>

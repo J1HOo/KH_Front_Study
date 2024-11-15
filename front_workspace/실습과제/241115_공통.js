@@ -7,11 +7,11 @@ function checkPolicy(event) {
   if (!policy1Checked || !policy2Checked || !policy3Checked) {
     alert("모든 필수 약관에 동의해야합니다.");
   } else {
-    window.location.href = "241115_회원가입.html";
+    window.location.href = "241115_행복나라_회원가입.html";
   }
 }
 
-function signUp(event) {
+addEventListener((event) => {
   if (event) event.preventDefault();
 
   const idInput = document.getElementById("idInput").value;
@@ -36,4 +36,4 @@ function signUp(event) {
   }
   alert("회원가입이 완료되었습니다!");
   window.location.href = "241115_메인.html";
-}
+});

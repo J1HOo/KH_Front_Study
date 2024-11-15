@@ -3,7 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>기본 이벤트 제거</title>
   </head>
-  <body></body>
+  <body>
+    <h1>기본 이벤트 제거</h1>
+    <pre>
+      a 태그의 기본 이벤트
+      : 클릭시 href 속성에 작성된 url로 이동
+
+      for 태그의 기본 이벤트
+      : form 태그 내부에서 submit 동작 발생시 action 속성에 작성된 url로
+        form 태그 내부 input 값들을 제출
+    </pre>
+
+    <form action="결과.html">
+      이름 : <input type="text" id="id-name" name="name-name" /> <br />
+      나이 : <input type="text" id="id-age" name="name-age" /> <br />
+      이메일 : <input type="text" id="id-email" name="name-email" /> <br />
+      <button onclick="제출(event)">등록하기</button>
+    </form>
+
+    <hr />
+    <!-- 방법2) 일반 버튼 클릭 시 form 태그 제출 막기
+          19_이벤트.html 에 작성된 이벤트 모델 방법 활용
+    -->
+    <form action="결과.html">
+      입력 : <input type="text" id="inputTest" />
+      <button type="button" id="btn">제출하기</button>
+    </form>
+
+    <script src="../js/16_기본이벤트제거.js"></script>
+  </body>
 </html>

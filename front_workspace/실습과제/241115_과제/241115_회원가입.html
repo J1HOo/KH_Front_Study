@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>회원가입</title>
+    <style>
+      .success-msg {
+        color: green;
+      }
+      .error-msg {
+        color: red;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <legend>회원가입</legend>
+
+      <label>아이디:</label>
+      <input
+        type="text"
+        id="userId"
+        placeholder="아이디를 입력하세요."
+        onkeyup="checkId()"
+      />
+      <small id="userMsg" class="msg"></small>
+
+      <br />
+
+      <label>비밀번호:</label>
+      <input
+        type="password"
+        id="pw"
+        placeholder="비밀번호를 입력하세요."
+        onkeyup="checkPw()"
+      />
+
+      <br />
+
+      <label>비밀번호 확인:</label>
+      <input
+        type="password"
+        id="confirmPw"
+        placeholder="비밀번호를 다시 입력하세요"
+        onkeyup="checkPw()"
+      />
+      <small id="pwMsg" class="msg"></small>
+
+      <br />
+
+      <label>이름:</label>
+      <input type="text" id="name" placeholder="이름을 입력하세요." />
+
+      <br />
+      <br />
+
+      <button onclick="signUp()">회원가입</button>
+      <small id="signUpMsg" class="msg"></small>
+    </fieldset>
+
+    <script>
+      function checkId() {
+        const userId = document.getElementById("userId").value;
+        const userMsg = document.getElementById("userMsg");
+
+        if (userId === "user01") {
+          userMsg.innerText = "이미 존재하는 아이디입니다.";
+          userMsg.className = "error-msg";
+        } else {
+          userMsg.innerText = "사용 가능한 아이디입니다.";
+          userMsg.className = "success-msg";
+        }
+      }
+
+      function checkPw() {
+        const pw = document.getElementById("pw").value;
+        const confirmPw = document.getElementById("confirmPw").value;
+        const pwMsg = document.getElementById("pwMsg");
+
+        if (pw && confirmPw) {
+          if (pw === confirmPw) {
+            pwMsg.innerText = "비밀번호가 일치합니다.";
+            pwMsg.className = "success-msg";
+          } else {
+            pwMsg.innerText = "비밀번호가 일치하지 않습니다.";
+            pwMsg.className = "error-msg";
+          }
+        }
+      }
+
+      function signUp() {
+        const userId = document.getElementById("userId").value;
+        const pw = document.getElementById("pw").value;
+        const confirmPw = document.getElementById("confirmPw").value;
+        const name = document.getElementById("name").value;
+        const signUpMsg = document.getElementById("signUpMsg");
+
+        if (!userId || !pw || !confirmPw || !name) {
+          signUpMsg.innerText = "모든 값을 입력해 주세요.";
+          signUpMsg.className = "error-msg";
+          return;
+        }
+
+        if (userId === "user01") {
+          signUpMsg.innerText = "사용할 수 없는 아이디입니다.";
+          signUpMsg.className = "error-msg";
+          userId.value = "";
+          userId.focus();
+          return;
+        }
+
+        if (pw !== confirmPw) {
+          signUpMsg.innerText = "비밀번호가 일치하지 않습니다.";
+          signUpMsg.className = "error-msg";
+          confirmPw.value = "";
+          confirmPw.focus();
+          return;
+        }
+
+        signUpMsg.innerText = `${name}님, 회원가입이 성공적으로 완료되었습니다^^`;
+        signUpMsg.className = "success-msg";
+
+        userId.value = "";
+        pw.value = "";
+        confirmPw.value = "";
+        name.value = "";
+      }
+    </script>
+  </body>
+</html>

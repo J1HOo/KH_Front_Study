@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습문제1</title>
+  </head>
+  <body>
+    <h1>Practice1</h1>
+    <fieldset>
+      <legend>종류</legend>
+      <input type="checkbox" id="전체선택" name="book" onclick="checkAll()" />
+      전체 선택
+      <input type="checkbox" id="종합" name="book" value="종합" /> 종합
+      <input type="checkbox" id="소설" name="book" value="소설" /> 소설
+      <input type="checkbox" id="시/에세이" name="book" value="시/에세이" />
+      시/에세이
+      <input type="checkbox" id="경제/경영" name="book" value="경제/경영" />
+      경제/경영
+      <input type="checkbox" id="자기계발" name="book" value="자기계발" />
+      자기계발 <input type="checkbox" id="아동" name="book" value="아동" /> 아동
+      <input type="checkbox" id="여행" name="book" value="여행" /> 여행
+      <input type="checkbox" id="과학" name="book" value="과학" /> 과학
+      <input type="checkbox" id="역사/문화" name="book" value="역사/문화" />
+      역사/문화
+      <input type="checkbox" id="외국어" name="book" value="외국어" /> 외국어
+      <input type="checkbox" id="컴퓨터" name="book" value="컴퓨터" /> 컴퓨터
+      <input type="checkbox" id="만화" name="book" value="만화" /> 만화
+    </fieldset>
+    <button onclick="checkCategory()">카테고리 선택</button>
+    <fieldset style="border: 1px solid red"><p id="result"></p></fieldset>
+
+    <script>
+      function checkAll() {
+        const selectAll = document.getElementById("전체선택");
+        const allCheckbox = document.getElementsByName("book");
+        for (let i = 0; i < allCheckbox.length; i++) {
+          allCheckbox[i].checked = selectAll.checked;
+        }
+      }
+
+      function checkCategory() {
+        const bookList = document.getElementsByName("book");
+        const result = document.getElementById("result");
+        let str = "";
+
+        for (let i = 1; i < bookList.length; i++) {
+          if (bookList[i].checked) {
+            str += bookList[i].value + " ";
+
+            result.innerHTML = str;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

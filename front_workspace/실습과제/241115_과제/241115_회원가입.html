@@ -107,16 +107,16 @@
         if (userId === "user01") {
           signUpMsg.innerText = "사용할 수 없는 아이디입니다.";
           signUpMsg.className = "error-msg";
-          userId.value = "";
-          userId.focus();
+          document.getElementById("userId").value = ""; // 변수를 불러오는게 아닌 직접 불러와야 작동하는 이유?
+          document.getElementById("userId").focus();
           return;
         }
 
         if (pw !== confirmPw) {
           signUpMsg.innerText = "비밀번호가 일치하지 않습니다.";
           signUpMsg.className = "error-msg";
-          confirmPw.value = "";
-          confirmPw.focus();
+          document.getElementById("confirmPw").value = "";
+          document.getElementById("confirmPw").focus();
           return;
         }
 
